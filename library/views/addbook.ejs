@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/book" method="post">
+        <select name="users">
+            <% for (var i=0; i < users.length; i++){ %>
+            <option value= <%= users[i].name %>><%= users[i].name %></option>
+            <% } %>
+        </select>
+        <input type="text" name="book" id="book" placeholder="book name">
+        <input type="text" name="author" id="author" placeholder="author name">
+        <input type="date" name="date">
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>
